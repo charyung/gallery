@@ -1,0 +1,9 @@
+.frame {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.date {
+    font-style: italic;
+}

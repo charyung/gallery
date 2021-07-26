@@ -2,8 +2,7 @@ import { createContext } from "react";
 import * as contentful from "contentful";
 
 const CONTENT_TYPES = {
-    IMAGE: "image",
-    THUMBNAIL: "thumbnail"
+    PICTURE: "picture"
 };
 
 const client = contentful.createClient({
