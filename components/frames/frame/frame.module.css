@@ -2,6 +2,7 @@
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 117px;
 }
 
 .picture {

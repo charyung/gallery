@@ -31,7 +31,7 @@ export default function Frames() {
                 });
                 setSections(Object
                     .keys(sectionData)
-                    .map(section => <Section title={SECTION_HEADERS[section] || SECTION_HEADERS["other"]} data={sectionData[section]}/>));
+                    .map(section => <Section title={SECTION_HEADERS[section] || SECTION_HEADERS["other"]} data={sectionData[section]} key={section}/>));
             })
             .catch(err => console.log(err));
     }, [client]);

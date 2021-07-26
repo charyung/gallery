@@ -1,13 +1,21 @@
 import Frame from "../frame/frame";
+import styles from "./section.module.css";
 
 export default function Section({ title, data }) {
     const pictures = data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>);
+    pictures.push(data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>));
+    pictures.push(data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>));
+    pictures.push(data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>));
+    pictures.push(data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>));
+    pictures.push(data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>));
 
     return (
         <>
-            <h2>{title}</h2>
+            <h2 className={styles.header}>{title}</h2>
             <hr/>
-            {pictures}
+            <div className={styles.grid}>
+                {pictures}
+            </div>
         </>
     );
 }

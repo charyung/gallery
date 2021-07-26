@@ -2,3 +2,7 @@
     min-height: 100vh;
     padding: 1rem 25vw;
 }
+
+.header {
+    font-size: 3rem;
+}

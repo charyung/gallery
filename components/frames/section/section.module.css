@@ -1,0 +1,11 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 117px);
+    row-gap: 1rem;
+    justify-content: space-around;
+}
+
+.header {
+    margin: 0;
+    text-align: right;
+}

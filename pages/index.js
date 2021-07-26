@@ -10,7 +10,7 @@ export default function Home() {
     const [pictureUrl, setPictureUrl] = useState(null);
     return (
         <div className={styles.container}>
-            <h1>Stuff I made.</h1>
+            <h1 className={styles.header}>Stuff I made.</h1>
             <ModalPictureContext.Provider value={{pictureUrl, setPictureUrl}}>
                 {pictureUrl ? <Modal/> : <></>}
                 <ContentfulContext.Provider value={client}>
