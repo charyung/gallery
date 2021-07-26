@@ -1,20 +1,40 @@
 import { useEffect, useContext, useState } from "react";
 import ContentfulContext, { CONTENT_TYPES } from "../../context/contentfulClient";
-import Frame from "./frame/frame";
+import Section from "./section/section";
+
+const SECTION_HEADERS = {
+    pixel: "Pixel",
+    photo: "Photography",
+    digital: "Digital",
+    traditional: "Traditional",
+    other: "Misc."
+};
 
 export default function Frames() {
     const client = useContext(ContentfulContext);
-    const [pictures, setPictures] = useState([]);
+    const [sections, setSections] = useState([]);
+
+    const sectionData = {};
 
     useEffect(() => {
         client
             .getEntries({ content_type: CONTENT_TYPES.PICTURE })
             .then(entries => { 
                 console.log(entries);
-                setPictures(entries["items"].map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>));
+                entries["items"].forEach(entry => {
+                    const type = entry.fields.imageType;
+                    if (!(type in sectionData)) {
+                        sectionData[type] = [];
+                    }
+
+                    sectionData[type].push(entry);
+                });
+                setSections(Object
+                    .keys(sectionData)
+                    .map(section => <Section title={SECTION_HEADERS[section] || SECTION_HEADERS["other"]} data={sectionData[section]}/>));
             })
             .catch(err => console.log(err));
     }, [client]);
 
-    return (<div>{pictures}</div>);
+    return (<div>{sections}</div>);
 }
