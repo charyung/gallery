@@ -1,8 +1,8 @@
 import { createContext } from "react";
 
 const ModalPictureContext = createContext({
-    pictureUrl: null,
-    setPictureUrl: () => {}
+    pictureData: null,
+    setPictureData: () => {}
 });
 
 export default ModalPictureContext;

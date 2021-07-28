@@ -3,11 +3,6 @@ import styles from "./section.module.css";
 
 export default function Section({ title, data }) {
     const pictures = data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>);
-    pictures.push(data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>));
-    pictures.push(data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>));
-    pictures.push(data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>));
-    pictures.push(data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>));
-    pictures.push(data.map(entry => <Frame pictureData={entry.fields} key={entry.sys.id}/>));
 
     return (
         <>

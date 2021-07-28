@@ -2,11 +2,17 @@
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 117px;
+    width: var(--thumbnail-size);
 }
 
 .picture {
+    width: 100px;
+    height: 100px;
     cursor: pointer;
+}
+
+.picture.pixel {
+    image-rendering: crisp-edges;
 }
 
 .date {

@@ -1,6 +1,8 @@
 .container {
     min-height: 100vh;
     padding: 1rem 25vw;
+    height: 100vh;
+    overflow: auto;
 }
 
 .header {
