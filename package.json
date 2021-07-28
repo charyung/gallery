@@ -2,11 +2,14 @@
   "name": "gallery",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://charyung.github.io/gallery",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "contentful": "^8.4.2",
@@ -17,6 +20,7 @@
   },
   "devDependencies": {
     "eslint": "7.31.0",
-    "eslint-config-next": "11.0.1"
+    "eslint-config-next": "11.0.1",
+    "gh-pages": "^3.2.3"
   }
 }
