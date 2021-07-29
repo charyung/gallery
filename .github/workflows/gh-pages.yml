@@ -20,6 +20,7 @@ jobs:
         env:
           CI: true
           DEPLOY_TARGET: gh-pages
+          environment: github-pages
       - run: touch out/.nojekyll
 
       - name: Deploy
@@ -29,3 +30,4 @@ jobs:
           BRANCH: gh-pages  # The branch the action should deploy to.
           FOLDER: out       # The folder the action should deploy.
           CLEAN: true       # Automatically remove deleted files from the deploy branch
+          
