@@ -6,6 +6,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.1
@@ -20,7 +21,6 @@ jobs:
         env:
           CI: true
           DEPLOY_TARGET: gh-pages
-          environment: github-pages
       - run: touch out/.nojekyll
 
       - name: Deploy
