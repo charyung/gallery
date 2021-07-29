@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build && next export",
-    "deploy": "gh-pages -d out"
+    "export": "next export"
   },
   "dependencies": {
     "contentful": "^8.4.2",
