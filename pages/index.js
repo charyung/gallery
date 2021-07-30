@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 import ContentfulContext, { client } from "../context/contentfulClient";
 import ModalPictureContext from "../context/modalPicture";
@@ -9,6 +10,9 @@ export default function Home() {
     const [pictureData, setPictureData] = useState(null);
     return (
         <div className={styles.container}>
+            <Head>
+                <title>Gallery</title>
+            </Head>
             <h1 className={styles.header}>Stuff I made.</h1>
             <ModalPictureContext.Provider value={{pictureData, setPictureData}}>
                 {pictureData ? <Modal/> : <></>}
