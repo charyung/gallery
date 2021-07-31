@@ -4,13 +4,17 @@ import ModalPictureContext from "../../../context/modalPicture";
 import styles from "./frame.module.css";
 
 const format = (date, format) => (
-    new Intl.DateTimeFormat("en", format).format(date)
+    new Intl.DateTimeFormat("en-GB", format).format(date)
 );
 
+const year = "numeric";
+const month = "2-digit";
+const day = "2-digit";
+
 const dateModFuncs = {
-    yearOnly: (date) => format(date, { year: "numeric" }),
-    yearMonthOnly: (date) => format(date, { year: "numeric", month: "numeric" }),
-    fullDate: (date) => format(date, { year: "numeric", month: "numeric", day: "numeric" })
+    yearOnly: (date) => format(date, { year }),
+    yearMonthOnly: (date) => format(date, { year, month }),
+    fullDate: (date) => format(date, { year, month, day })
 };
 
 const PIXEL_TYPE = "pixel";

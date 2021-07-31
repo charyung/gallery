@@ -20,7 +20,6 @@ export default function Frames() {
         client
             .getEntries({ content_type: CONTENT_TYPES.PICTURE })
             .then(entries => { 
-                console.log(entries);
                 entries["items"].forEach(entry => {
                     const type = entry.fields.imageType;
                     if (!(type in sectionData)) {
