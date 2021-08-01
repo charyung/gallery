@@ -9,10 +9,10 @@
     width: 100px;
     height: 100px;
     cursor: pointer;
-}
-
-.picture.pixel {
-    image-rendering: crisp-edges;
+    
+    &.pixel {
+        image-rendering: crisp-edges;
+    }
 }
 
 .date {

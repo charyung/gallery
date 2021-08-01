@@ -6,7 +6,7 @@ import ModalPictureContext from "../context/modalPicture";
 import ThemeContext, { AVAILABLE_THEMES } from "../context/theme";
 import Frames from "../components/frames/frames";
 import Modal from "../components/modal/modal";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import ThemeSetter from "../components/themeSetter/themeSetter";
 
 export default function Home() {

@@ -1,0 +1,14 @@
+.themesContainer button {
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    
+    &:not(.active) {
+        cursor: pointer;
+    }
+
+    &.active {
+        text-decoration: underline;
+    }
+}

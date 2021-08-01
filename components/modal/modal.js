@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import classNames from "classnames";
 import ModalPictureContext from "../../context/modalPicture";
-import styles from "./modal.module.css";
+import styles from "./modal.module.scss";
 
 export default function Modal() {
     const { pictureData, setPictureData } = useContext(ModalPictureContext);

@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import themes from "../styles/themes.module.css";
+import themes from "../styles/themes.module.scss";
 
 const AVAILABLE_THEMES = themes;
 

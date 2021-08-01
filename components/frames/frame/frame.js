@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import classNames from "classnames";
 import ModalPictureContext from "../../../context/modalPicture";
-import styles from "./frame.module.css";
+import styles from "./frame.module.scss";
 
 const format = (date, format) => (
     new Intl.DateTimeFormat("en-GB", format).format(date)
