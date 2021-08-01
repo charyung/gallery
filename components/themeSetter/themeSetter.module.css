@@ -1,0 +1,8 @@
+.themesContainer button {
+    border: none;
+    background: none;
+}
+
+.themesContainer button:not(.active) {
+    cursor: pointer;
+}
