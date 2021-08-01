@@ -29,3 +29,21 @@ button:not(.active) {
         color: black;
     }
 }
+
+.crystal {
+    color: #4f76cf;
+    background-color: #35205a;
+
+    button:not(.active) {
+        color: #cb409c;
+    }
+}
+
+.gold {
+    color: #978439;
+    background-color: #1f1b17;
+
+    button:not(.active) {
+        color: #c9c8c6;
+    }
+}
