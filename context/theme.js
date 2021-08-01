@@ -1,9 +1,8 @@
 import { createContext } from "react";
-import themes from "../styles/themes.module.scss";
 
-const AVAILABLE_THEMES = themes;
+const EXCLUDED_THEMES = new Set(["active"]);
 
 const ThemeContext = createContext();
 
-export { AVAILABLE_THEMES };
+export { EXCLUDED_THEMES };
 export default ThemeContext;

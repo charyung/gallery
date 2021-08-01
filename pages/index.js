@@ -3,15 +3,16 @@ import { useState } from "react";
 import classNames from "classnames";
 import ContentfulContext, { client } from "../context/contentfulClient";
 import ModalPictureContext from "../context/modalPicture";
-import ThemeContext, { AVAILABLE_THEMES } from "../context/theme";
+import ThemeContext from "../context/theme";
 import Frames from "../components/frames/frames";
 import Modal from "../components/modal/modal";
-import styles from "../styles/Home.module.scss";
 import ThemeSetter from "../components/themeSetter/themeSetter";
+import styles from "../styles/Home.module.scss";
+import themes from "../styles/themes.module.scss";
 
 export default function Home() {
     const [pictureData, setPictureData] = useState(null);
-    const [theme, setTheme] = useState(AVAILABLE_THEMES.light);
+    const [theme, setTheme] = useState(themes.light);
     return (
         <div className={classNames(styles.container, theme)}>
             <Head>

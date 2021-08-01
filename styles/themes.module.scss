@@ -1,9 +1,31 @@
+button:not(.active) {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .light {
     color: black;
     background-color: white;
+
+    button:not(.active) {
+        color: blue;
+    }
 }
 
 .night {
     color: #c5bad4;
     background-color: #2d3246;
+
+    button:not(.active) {
+        color: #f6ecd0;
+    }
+}
+
+.utsc {
+    color: #ecdfbc;
+    background-color: #8b7d59;
+
+    button:not(.active) {
+        color: black;
+    }
 }
