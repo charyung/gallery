@@ -18,7 +18,10 @@ export default function Frames() {
 
     useEffect(() => {
         client
-            .getEntries({ content_type: CONTENT_TYPES.PICTURE })
+            .getEntries({
+                content_type: CONTENT_TYPES.PICTURE,
+                order: "-fields.creationDate"
+            })
             .then(entries => { 
                 entries["items"].forEach(entry => {
                     const type = entry.fields.imageType;
