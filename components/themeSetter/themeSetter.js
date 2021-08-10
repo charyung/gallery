@@ -23,3 +23,10 @@ export default function ThemeSetter() {
 
     return <div className={styles.themesContainer}>{themeLayout}</div>;
 }
+
+const osThemeListener = () => {
+    window.matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", e =>  e.matches ? "night" : "light");
+};
+
+export { osThemeListener };
